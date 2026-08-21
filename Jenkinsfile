@@ -12,6 +12,12 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
         AWS_DEFAULT_REGION = 'ap-south-1'
         TF_IN_AUTOMATION = 'true'
+
+
+        TF_VAR_admin_cidr = '106.219.145.170/32'
+        TF_VAR_ami_id = 'ami-035827357e3c7e810'
+        TF_VAR_key_name = 'lab2-key'
+
     }
 
     stages {
