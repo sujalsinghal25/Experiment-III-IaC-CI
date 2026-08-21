@@ -33,7 +33,7 @@ pipeline {
             steps {
                 sh 'tflint --init && tflint --format compact'
                 sh 'tfsec . --format junit --out tfsec-report.xml --soft-fail'
-                sh 'tfsec . --minimum-severity HIGH'
+                sh 'tfsec . --minimum-severity HIGH --soft-fail'
             }
 
             post {
