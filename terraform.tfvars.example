@@ -1,0 +1,7 @@
+# Copy this file to terraform.tfvars and fill in your own values.
+# Never commit terraform.tfvars if it contains anything sensitive.
+
+admin_cidr = "203.0.113.7/32"   # run: curl -s https://checkip.amazonaws.com
+ami_id     = "ami-0abcdef1234567890"  # look up latest Amazon Linux 2023 AMI for your region
+key_name   = "my-lab-keypair"         # name of an EC2 key pair you already created
+region     = "ap-south-1"
