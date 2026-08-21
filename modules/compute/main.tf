@@ -26,11 +26,11 @@ resource "aws_instance" "web" {
 # from module.network) — it does NOT depend_on the web instances, which is
 # why Output 2.1 shows web[] and db creating in parallel, not in sequence.
 resource "aws_instance" "db" {
-  ami                     = var.ami_id
-  instance_type           = var.instance_type
-  subnet_id               = var.private_subnet_id
-  vpc_security_group_ids  = [var.db_sg_id]
-  key_name                = var.key_name
+  ami                    = var.ami_id
+  instance_type          = var.instance_type
+  subnet_id              = var.private_subnet_id
+  vpc_security_group_ids = [var.db_sg_id]
+  key_name               = var.key_name
 
   tags = {
     Name = "db"
